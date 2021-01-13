@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&display=swap');
+/* alata weight 400
+josefin sans 300 */
+:root {
+    --whitePrimary:hsl(0, 0%, 100%);
+    --blackPrimary:hsl(0, 0%, 0%);
+    --darkGrayPrimary:hsl(0, 0%, 55%);
+    --veryDarkGrayPrimary:hsl(0, 0%, 41%);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.mainWrapper {
+    /* background-image: url(./images/mobile/image-hero.jpg);
+    background-size: contain;
+    background-repeat: no-repeat; */
+}
+.bgcImage img {
+    width: 100%;
+}
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    /* overflow: hidden; */
+}
+.navBar .brandTitle{
+    font-family: "alata";
+    color: var(--whitePrimary);
+    font-size: 1.9rem;    
+}
+.navBar .navBtn {
+    position: relative;
+    width: 40px;
+    top: 10%;
+    background-color: transparent;
+    border: none;
+}
+button:focus {
+    outline: none;
+}
+.navBar .navBtn::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    border-radius: 3px;
+    width: 30px;
+    background-color: var(--whitePrimary);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 25%;
+    transition: 0.3s;
+}
+.navBar .navBtn span{
+    position: absolute;
+    height: 3px;
+    border-radius: 4px;
+    width: 30px;
+    background-color: var(--whitePrimary);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    transition: 0.2s;
+}
+.navBar .navBtn::before {
+    content: "";
+    position: absolute;
+    height: 3px;
+    border-radius: 3px;
+    width: 30px;
+    background-color: var(--whitePrimary);
+    left: 50%;
+    transform: translate(-50%,-50%);
+    top: 75%;
+    transition: 0.3s;
+}
+.navBar .open span {
+    visibility: hidden;
+    opacity: 0;
+}
+.navBar .open::before {
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+}
+.navBar .open::after {
+    top: 50%;
+    transform: translate(-50%,-50%) rotate(-45deg);
+}
+.headerContent {
+    margin: auto auto auto 0;
+    margin-top: 190px;
+    color: var(--whitePrimary);
+    font-family: "josefin sans";
+    text-transform: uppercase;
+    border: 2px solid white;
+    max-width: 340px;
+    padding: 22px;
+    font-size: 36px;
+}
+header {
+    background-color: black;
+    background-image: url(./images/mobile/image-hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px 20px 250px 20px;
+}
+ul.mobile-nav {
+    visibility: hidden;
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    list-style-type: none;
+    color: white;
+}
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-family: "josefin sans";
+}
+ul.mobile-nav li {
+    margin-top: 15px;
+}
+/* navigacja na telefonie */
+.openNavBar{
+    background-image: none;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+.removeContent {
+    visibility: hidden;
+}
+
+.showList {
+    visibility: visible !important;
+}
+main {
+    padding: 0 20px 0 20px;
+}
+.vrSection {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.vrPhoto {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+.vrPhoto img {
+    width: 100%;
+}
+.vrSection h1 {
+    text-align: center;
+    font-family: "josefin sans", arial;
+    text-transform: uppercase;
+}
+.vrSection p {
+    margin-top: 20px;
+    text-align: center;
+    margin-left: 35px;
+    margin-right: 35px;
+    font-family: "alata", arial;
+    color: var(--darkGrayPrimary);
+}
+.creationSection h1{
+    margin-top: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "josefin sans", arial;
+}
+.creationsContainer {
+    margin-top: 50px ;
+}
+.creationSection .creationsContainer div {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+    max-width: 600px;
+}
+.creationSection .creationsContainer div p {
+    position: absolute;
+    color: white;
+    top: 50%;
+    font-size: 2rem;
+    left: 10%;
+    z-index: 1;
+    font-family: "josefin sans", arial;
+    text-transform: uppercase;
+}
+.creationSection div img {
+    margin-top: 20px;
+    width: 100%;
+}
+.seeAll {
+    display: flex;
+    margin: 25px auto;
+    background-color: white;
+    padding: 10px 50px;
+    text-transform: uppercase;
+    font-family: "alata";
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+footer {
+    margin-top: 100px;
+    left: 0;
+    background-color: black;
+    height: 480px;
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-family: "josefin sans";
+}
+footer h2 {
+    font-family: "alata";
+    margin-bottom: 50px;
+}
+.footerNav li {
+    list-style-type: none;
+    margin-top: 25px;
+    cursor: pointer;
+}
+.iconContainer img {
+    margin: 55px 7px 15px 7px;
+}
+.terms {
+    color: var(--veryDarkGrayPrimary);
+    font-family: "alata";
+}
+.desktopNav {
+    visibility: hidden;
+    display: none;
+}
+@media (min-width:730px) {
+    .navBar {
+        display: flex;
+    }
+    header {
+        background-color: black;
+        background-image: url(./images/desktop/image-hero.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        padding: 50px 100px 250px 100px;
+    }
+    .headerContent {
+        max-width: 550px;
+        font-size: 56px;
+        height: 200px;
+    }
+    .navBtn {
+        display: none;
+    }
+    .desktopNav {
+        display: flex;
+        visibility: visible;
+        list-style-type: none;
+        width: 600px;
+        justify-content: space-between;
+        height: 50px;
+    }
+    .navBar .brandTitle {
+        align-self: flex-start;
+    }
+    .vrPhoto {
+        margin: 0 auto 40px auto;
+        max-width: 750px;
+    }
+    
+}
+@media (min-width: 1440px) {
+.headerContent {
+    font-size: 78px;
+    height: 300px;
+    padding: 30px 30px;
+    max-width: 700px;
+}
+.navBar .brandTitle {
+    font-size: 38px;
+}
+.navBtn {
+    display: none;
+    visibility: hidden;
+}
+.desktopNav {
+    display: flex;
+    list-style-type: none;
+    width: 600px;
+    justify-content: space-between;
+    height: 50px;
+}
+.navBar {
+    justify-content: space-between;
+    height: 70px;
+    align-items: flex-end;
+    font-size: 18px;
+}
+.navBar .brandTitle {
+    align-self: flex-start;
+}
+.contentWrap {
+    position: relative;
+    /* border: 2px solid black; */
+    width: 70%;
+    text-align: start;
+}
+.vrPhoto {
+    margin: 0;
+    margin-left: 36px;
+}
+.contentWrap .contentWrapText{
+    text-align: start;
+    /* border: 1px solid black; */
+    position: absolute;
+    top: 45%;
+    padding: 50px;
+    left: 40%;
+    z-index: 2;
+    background-color: white;
+    height: 60%;
+    width: 700px;
+    align-items: center;
+}
+.contentWrap .contentWrapText h1 {
+    font-size: 42px;
+}
+footer {
+    position: relative;
+    height: 200px;
+}
+footer h2 {
+    position: absolute;
+    top: 42%;
+    left: 20%;
+    /* transform: translate(-50%, -50%); */
+    font-family: "alata";
+}
+.footerNav li:nth-child(1) {
+    position: absolute;
+    top: 65%;
+    left: 20%;
+    list-style-type: none;
+    cursor: pointer;
+    /* transform: translate(-50%, -50%); */
+}
+.footerNav li:nth-child(2) {
+    position: absolute;
+    top: 65%;
+    left: 24%;
+    list-style-type: none;
+    cursor: pointer;
+    /* transform: translate(-50%, -50%); */
+}
+.footerNav li:nth-child(3) {
+    position: absolute;
+    top: 65%;
+    left: 28%;
+    list-style-type: none;
+    cursor: pointer;
+    /* transform: translate(-50%, -50%); */
+}
+.footerNav li:nth-child(4) {
+    position: absolute;
+    top: 65%;
+    left: 32%;
+    list-style-type: none;
+    cursor: pointer;
+    /* transform: translate(-50%, -50%); */
+}
+.footerNav li:nth-child(5) {
+    position: absolute;
+    top: 65%;
+    left: 36%;
+    list-style-type: none;
+    cursor: pointer;
+    /* transform: translate(-50%, -50%); */
+}
+.iconContainer img {
+    position: absolute;
+    left: 81%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+.iconContainer img:nth-child(2) {
+    position: absolute;
+    left: 75%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+.iconContainer img:nth-child(3) {
+    position: absolute;
+    left: 77%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+.iconContainer img:nth-child(4) {
+    position: absolute;
+    left: 79%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+.terms {
+    position: absolute;
+    left: 80%;
+    top: 79.5%;
+    transform: translate(-50%, -50%);
+    color: var(--veryDarkGrayPrimary);
+    font-family: "alata";
+}
+
+main {
+    margin: 50px 100px 0px 100px;
+}
+.creationSection h1 {
+    text-align: start;
+    margin-left: 35px;
+    font-size: 42px;
+    width: 55%;
+    flex-grow: 1;
+}
+.creationsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+.seeAll {
+    order: -2;
+    height: 50px;
+    width: 55px;
+    flex-grow: 1;
+    justify-content: center;
+    cursor: pointer;
+
+}
+.creationSection h1 {
+    order: -2;
+    margin-right: 16%;
+}
+.creationSection .creationsContainer div img {
+    display: none;
+}
+.creationSection .creationsContainer div:nth-of-type(1) {
+    display: flex;
+    background-image: url(./images/desktop/image-deep-earth.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.creationSection .creationsContainer div:nth-child(3) {
+    margin-top: 20px;
+    display: flex;
+    height: 600px;
+    background-image: url(./images/desktop/image-night-arcade.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.creationSection .creationsContainer div:nth-child(4) {
+    margin-top: 20px;
+    display: flex;
+    height: 600px;
+    background-image: url(./images/desktop/image-soccer-team.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.creationSection .creationsContainer div:nth-child(5) {
+    margin-top: 20px;
+    display: flex;
+    height: 600px;
+    background-image: url(./images/desktop/image-grid.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.creationSection .creationsContainer div:nth-child(6) {
+    margin-top: 20px;
+    display: flex;
+    height: 600px;
+    background-image: url(./images/desktop/image-from-above.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.creationSection .creationsContainer div:nth-child(7) {
+    margin-top: 20px;
+    display: flex;
+    height: 600px;
+    background-image: url(./images/desktop/image-pocket-borealis.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.creationSection .creationsContainer div:nth-child(8) {
+    margin-top: 20px;
+    display: flex;
+    height: 600px;
+    background-image: url(./images/desktop/image-curiosity.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.creationSection .creationsContainer div:nth-child(9) {
+    margin-top: 20px;
+    display: flex;
+    height: 600px;
+    background-image: url(./images/desktop/image-fisheye.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.creationSection .creationsContainer div {
+    width: 22% !important;
+    flex-grow: 1;
+    margin: 15px;
+}
+}
